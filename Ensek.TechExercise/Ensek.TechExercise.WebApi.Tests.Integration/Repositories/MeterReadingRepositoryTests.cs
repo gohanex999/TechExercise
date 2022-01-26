@@ -27,7 +27,6 @@ namespace Ensek.TechExercise.WebApi.Tests.Integration.Repositories
         [Test]
         public async Task GivenAccountHasAPreviousMeterReadings_WhenLastMeterReadingForAccountAsyncCalled_ThenTheLatestMeterReadingIsReturned()
         {
-            // Setup
             var date1 = DateTime.UtcNow.AddDays(-3);
             var date2 = DateTime.UtcNow.AddDays(-2);
             var date3 = DateTime.UtcNow.AddDays(-1);
