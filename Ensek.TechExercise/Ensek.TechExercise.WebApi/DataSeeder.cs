@@ -7,13 +7,10 @@ namespace Ensek.TechExercise.DataAccess.Sql
 {
     public static class DataSeeder
     {
-        //private const string TestAccountCsvFilePath = "D:\\Projects\\Ensek\\TechExercise\\Ensek.TechExercise\\Ensek.TechExercise.DataAccess.Sql\\Resources\\Test_Accounts.csv";
-
         private const string AccountsCsv = "Test_Accounts.csv";
         
         public static void Seed(EnsekDbContext context)
         {
-
             var csvFilePath = Path.Combine(Environment.CurrentDirectory, AccountsCsv);
 
             context.Database.EnsureCreated();

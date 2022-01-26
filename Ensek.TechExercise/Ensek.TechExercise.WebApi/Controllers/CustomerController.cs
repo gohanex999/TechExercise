@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Ensek.TechExercise.WebApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
     {
