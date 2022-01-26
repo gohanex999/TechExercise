@@ -24,12 +24,6 @@ namespace Ensek.TechExercise.WebApi.Tests.Integration.Repositories
             _sut = new MeterReadingRepository(_dbContext);
         }
 
-        //[Test] For manager
-        //public void GivenMeterReadingsHasValidData_WhenStoreMeterReadingsIsCalled_()
-        //{
-
-        //}
-
         [Test]
         public async Task GivenAccountHasAPreviousMeterReadings_WhenLastMeterReadingForAccountAsyncCalled_ThenTheLatestMeterReadingIsReturned()
         {
