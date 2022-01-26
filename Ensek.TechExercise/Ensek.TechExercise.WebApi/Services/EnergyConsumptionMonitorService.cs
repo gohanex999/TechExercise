@@ -17,7 +17,7 @@ namespace Ensek.TechExercise.Domain.Services
         public async Task<MeterReadingResponseModel> ProcessMeterReadingsAsync(IFormFile file)
         {
             var meterReadingsCsv = _meterReadingParser.ParseCsv(file);
-            var meterReadings = _meterReadingParser.ParseToObjects(meterReadingsCsv);
+            var meterReadings = _meterReadingParser.ParseToMeterReadings(meterReadingsCsv);
             return await _meterReaderManager.StoreMeterReadingsAsync(meterReadings);
         }
     }

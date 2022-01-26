@@ -38,7 +38,7 @@ namespace Ensek.TechExercise.WebApi.Tests.Unit.Services
 
             var meterReadingObjects = new List<MeterReading>();
 
-            _mockMeterReadingParser.Setup(x => x.ParseToObjects(meterReadingsCsv))
+            _mockMeterReadingParser.Setup(x => x.ParseToMeterReadings(meterReadingsCsv))
                               .Returns(meterReadingObjects);
 
             var responseModel = new MeterReadingResponseModel();
@@ -49,7 +49,7 @@ namespace Ensek.TechExercise.WebApi.Tests.Unit.Services
             var actual = await _sut.ProcessMeterReadingsAsync(_mockFormFile.Object);
 
             _mockMeterReadingParser.Verify(x => x.ParseCsv(_mockFormFile.Object));
-            _mockMeterReadingParser.Verify(x => x.ParseToObjects(meterReadingsCsv));
+            _mockMeterReadingParser.Verify(x => x.ParseToMeterReadings(meterReadingsCsv));
             _mockMeterReaderManager.Verify(x => x.StoreMeterReadingsAsync(meterReadingObjects));
             actual.Should().BeEquivalentTo(responseModel);
         }

@@ -36,7 +36,7 @@ namespace Ensek.TechExercise.WebApi.Tests.Unit.Services
                 new MeterReading() { AccountId = 1, MeterReadingDateTime = DateTime.Parse(meterReadingDateTimeString), MeterReadValue = 1234 }
             };
 
-            var actual = _sut.ParseToObjects(csv);
+            var actual = _sut.ParseToMeterReadings(csv);
             actual.Should().BeEquivalentTo(expected);
         }
 
@@ -53,7 +53,7 @@ namespace Ensek.TechExercise.WebApi.Tests.Unit.Services
                 new MeterReading()
             };
 
-            var actual = _sut.ParseToObjects(csv);
+            var actual = _sut.ParseToMeterReadings(csv);
             actual.Should().BeEquivalentTo(expected);
         }
 
@@ -70,7 +70,7 @@ namespace Ensek.TechExercise.WebApi.Tests.Unit.Services
                 new MeterReading()
             };
 
-            var actual = _sut.ParseToObjects(csv);
+            var actual = _sut.ParseToMeterReadings(csv);
             actual.Should().BeEquivalentTo(expected);
         }
     }

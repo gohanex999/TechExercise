@@ -16,7 +16,7 @@ namespace Ensek.TechExercise.WebApi.Services
             return csv.GetRecords<MeterReadingCsv>().ToList();
         }
 
-        public List<MeterReading> ParseToObjects(IEnumerable<MeterReadingCsv> meterReadingsCsv)
+        public List<MeterReading> ParseToMeterReadings(IEnumerable<MeterReadingCsv> meterReadingsCsv)
         {
             List<MeterReading> meterReadings = new List<MeterReading>();
 
